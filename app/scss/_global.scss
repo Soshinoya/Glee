@@ -1,0 +1,27 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+  color: $default-color;
+  @extend %dmsans-400;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1770px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.footer {
+  max-width: 1200px;
+  margin: 0 auto;
+}

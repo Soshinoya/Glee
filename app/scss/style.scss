@@ -1,0 +1,265 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+.header {
+  padding-top: 40px;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  &__title {
+    padding-left: 20px;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+  }
+  &__list-item + &__list-item {
+    padding-left: 45px;
+  }
+  &__list-link {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 12px;
+    color: $accent-color;
+    &:hover::after {
+      padding: 0 5px;
+      content: "+";
+    }
+  }
+}
+
+.user__nav {
+  display: flex;
+  align-items: center;
+  &-link {
+    position: relative;
+    padding: 24px 35px 15px 35px;
+    border-radius: 50%;
+  }
+  &-link--search {
+    padding: 22px;
+    background-color: $gray-color;
+    border-radius: 50%;
+    height: min-content;
+  }
+  &-link--burger {
+    padding: 18px;
+    background-color: $burger-color;
+    border-radius: 50%;
+    height: min-content;
+  }
+  &-num {
+    position: absolute;
+    background-color: #fff;
+    color: $title-color;
+    border-radius: 50%;
+    padding: 0 6px;
+    top: 16px;
+    right: 25px;
+    font-size: 10px;
+    line-height: 18px;
+  }
+  &-wrapper {
+    display: flex;
+    margin: 0 20px;
+    background-color: $beige-color;
+    border-radius: 50px 50px 50px 50px;
+  }
+}
+
+.footer-top {
+  display: flex;
+  justify-content: center;
+  padding-top: 80px;
+  &__address {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 0;
+    color: #7c7c7c;
+  }
+  &__item-contact {
+    max-width: 200px;
+    margin-right: 100px;
+  }
+  &__item-service {
+    max-width: 131px;
+    margin-right: 175px;
+  }
+  &__item-account {
+    max-width: 100px;
+    margin-right: 210px;
+  }
+  &__item-newsletter {
+    max-width: 282px;
+  }
+  &__item-list, &__text {
+    margin-top: 30px;
+  }
+  &__link, &__text {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 34px;
+    color: #7c7c7c;
+  }
+  &__text {
+    margin-bottom: 35px;
+  }
+  &__title {
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #1f2044;
+  }
+  &__form-input {
+    max-width: 170px;
+    border: none;
+    background-color: #FFF7F0;
+    padding: 13px 0 15px 17px;
+    &::placeholder {
+      color: #234969;
+      font-size: 12px;
+    }
+  }
+  &__form-btn {
+    border: none;
+    background-color: #9ABCCA;
+    padding: 13px 18px;
+    margin-left: -4px;
+    font-size: 14px;
+    line-height: 21px;
+    color: #fff;
+  }
+}
+
+.footer-border {
+  display: flex;
+  padding-bottom: 70px;
+  border-bottom: 1px solid #B2B6B8;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+  &__menu {
+    display: flex;
+  }
+  &__item {
+    padding: 0 15px;
+    border-right: 1px solid #8F8F8F;
+  }
+  &__item:last-child {
+    border: none;
+  }
+  & a {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    color: $default-color;
+    font-size: 14px;
+    line-height: 32px; 
+  }
+}
+
+.top-slider {
+  padding-top: 45px;
+  margin-bottom: 55px;
+  &__inner {
+    background-color: $beige-color;
+  }
+  &__item {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 297px;
+    padding-right: 200px;
+    position: relative;
+  }
+  &__content {
+    margin-top: 215px;
+    margin-bottom: 230px;
+  }
+  &__title {
+    max-width: 470px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 72px;
+    line-height: 70px;
+    color: $title-color;
+    margin-bottom: 45px;
+  }
+  &__text {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    max-width: 374px;
+    color: $accent-color;
+    margin-bottom: 40px;
+  }
+  &__link {
+    @extend %bg;
+  }
+  &__ellipse {
+    margin-left: 700px;
+    width: 634px;
+    height: 634px;
+    position: absolute;
+  }
+  &__img {
+    z-index: 10;
+  }
+}
+
+ul.slick-dots {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+  li {
+    padding: 0 10px;
+    button {
+      padding: 10px;
+      border: none;
+      border-radius: 50%;
+      color: $title-color;
+      font-family: 'Rubik', sans-serif;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 8px;
+    }
+    &.slick-active {
+        button {
+          background-color: #fff;
+        }
+      }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@import 'media';

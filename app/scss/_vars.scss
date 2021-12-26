@@ -1,0 +1,38 @@
+$accent-color: #436372;
+$title-color: #243f4d;
+$default-color: #585858;
+$gray-color: #ECF1F4;
+$burger-color: #9ABCCA;
+$beige-color: #FFD8B6;
+
+%dmsans-700 {
+  font-family: 'DMSans-Bold', sans-serif;
+  font-weight: 700;
+}
+%dmsans-500 {
+  font-family: 'DMSans-Medium', sans-serif;
+  font-weight: 500;
+}
+%dmsans-400 {
+  font-family: 'DMSans-Regular', sans-serif;
+  font-weight: 400;
+}
+%poppins-700 {
+  font-family: 'Poppins-Bold', sans-serif;
+  font-weight: 700;
+}
+%bg {
+  background-color: $burger-color;
+  color: #fff;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 12px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 200px;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  padding-left: 25px;
+  padding-right: 20px;
+}
