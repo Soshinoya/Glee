@@ -1,8 +1,8 @@
-@import 'vars';
-@import 'fonts';
-@import 'reset';
-@import 'libs';
-@import 'global';
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "libs";
+@import "global";
 
 .header {
   padding-top: 40px;
@@ -30,7 +30,7 @@
     padding-left: 45px;
   }
   &__list-link {
-    font-family: 'Rubik', sans-serif;
+    font-family: "Rubik", sans-serif;
     font-weight: 500;
     font-size: 15px;
     line-height: 12px;
@@ -86,7 +86,7 @@
   justify-content: center;
   padding-top: 80px;
   &__address {
-    font-family: 'Rubik', sans-serif;
+    font-family: "Rubik", sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 0;
@@ -107,11 +107,13 @@
   &__item-newsletter {
     max-width: 282px;
   }
-  &__item-list, &__text {
+  &__item-list,
+  &__text {
     margin-top: 30px;
   }
-  &__link, &__text {
-    font-family: 'Rubik', sans-serif;
+  &__link,
+  &__text {
+    font-family: "Rubik", sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 34px;
@@ -130,7 +132,7 @@
   &__form-input {
     max-width: 170px;
     border: none;
-    background-color: #FFF7F0;
+    background-color: #fff7f0;
     padding: 13px 0 15px 17px;
     &::placeholder {
       color: #234969;
@@ -139,7 +141,7 @@
   }
   &__form-btn {
     border: none;
-    background-color: #9ABCCA;
+    background-color: #9abcca;
     padding: 13px 18px;
     margin-left: -4px;
     font-size: 14px;
@@ -151,7 +153,7 @@
 .footer-border {
   display: flex;
   padding-bottom: 70px;
-  border-bottom: 1px solid #B2B6B8;
+  border-bottom: 1px solid #b2b6b8;
 }
 
 .footer-bottom {
@@ -163,17 +165,17 @@
   }
   &__item {
     padding: 0 15px;
-    border-right: 1px solid #8F8F8F;
+    border-right: 1px solid #8f8f8f;
   }
   &__item:last-child {
     border: none;
   }
   & a {
-    font-family: 'Rubik', sans-serif;
+    font-family: "Rubik", sans-serif;
     font-weight: 400;
     color: $default-color;
     font-size: 14px;
-    line-height: 32px; 
+    line-height: 32px;
   }
 }
 
@@ -197,15 +199,15 @@
   }
   &__title {
     max-width: 470px;
-    font-family: 'Rubik', sans-serif;
+    font-family: "Rubik", sans-serif;
     font-weight: 500;
     font-size: 72px;
     line-height: 70px;
-    color: $title-color;
+    color: #243f4d;
     margin-bottom: 45px;
   }
   &__text {
-    font-family: 'Rubik', sans-serif;
+    font-family: "Rubik", sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 30px;
@@ -238,16 +240,130 @@ ul.slick-dots {
       border: none;
       border-radius: 50%;
       color: $title-color;
-      font-family: 'Rubik', sans-serif;
+      font-family: "Rubik", sans-serif;
       font-weight: 500;
       font-size: 10px;
       line-height: 8px;
     }
     &.slick-active {
-        button {
-          background-color: #fff;
-        }
+      button {
+        background-color: #fff;
       }
+    }
+  }
+}
+
+.info {
+  background-color: #fff7f0;
+  &__items {
+    display: flex;
+    justify-content: space-around;
+    padding: 45px 0;
+  }
+  &__item {
+    position: relative;
+    max-width: 200px;
+    &:nth-child(2) {
+      max-width: 215px;
+    }
+    &-img {
+      position: absolute;
+      top: 12px;
+      left: -85px;
+    }
+    &-title {
+      @extend %dmsans-700;
+      font-size: 18px;
+      line-height: 40px;
+      color: #414141;
+    }
+  }
+}
+
+.filter {
+  margin-bottom: 80px;
+  &-btn {
+    background-color: transparent;
+    border: none;
+    color: #8c8c8c;
+    cursor: pointer;
+  }
+}
+
+.mixitup-control-active {
+  color: $title-color;
+  @extend %dmsans-700;
+}
+
+.products {
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+  &__item {
+    width: 270px;
+    padding-top: 30px;
+    padding-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+  }
+  &__item:hover &__icon--main {
+    transform: translateY(0px)
+  }
+  &__item:hover &__icon--lupa {
+    transform: translateX(0px)
+  }
+  &__item:hover &__icon--heart {
+    transform: translateX(0px)
+  }
+  &__item-title {
+    @extend %dmsans-500;
+    color: $accent-color;
+    line-height: 40px;
+    padding-top: 70px;
+    font-size: 16px;
+  }
+  &__price {
+    @extend %dmsans-700;
+    color: $burger-color;
+    line-height: 40px;
+  }
+  &__panel {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    margin-bottom: 100px;
+  }
+  &__btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  &__btn + &__btn {
+    padding-left: 10px;
+  }
+  &__icon {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: all .5s;
+    &--main {
+      background-color: $burger-color;
+      transform: translateY(300px)
+    }
+    &--lupa {
+      transform: translateX(-300px)
+    }
+    &--heart {
+      transform: translateX(300px)
+    }
   }
 }
 
@@ -260,6 +376,4 @@ ul.slick-dots {
 
 
 
-
-
-@import 'media';
+@import "media";
