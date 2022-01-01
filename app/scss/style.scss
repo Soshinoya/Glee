@@ -277,6 +277,22 @@ ul.slick-dots {
       line-height: 40px;
       color: #414141;
     }
+    &--line::before,
+    &--line::after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 190px;
+      background-color: #eae5e0;
+    }
+    &--line::before {
+      margin-top: -45px;
+      margin-left: -215px;
+    }
+    &--line::after {
+      margin-top: -115px;
+      margin-left: 420px;
+    }
   }
 }
 
@@ -314,14 +330,20 @@ ul.slick-dots {
     overflow: hidden;
     box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
   }
-  &__item:hover &__icon--main {
-    transform: translateY(0px)
+  &__btn:hover {
+    background-color: #9ABCCA;
+    path {
+      fill: #fff;
+    }
   }
-  &__item:hover &__icon--lupa {
-    transform: translateX(0px)
+  &__item:hover &__btn--main {
+    transform: translateY(0px);
   }
-  &__item:hover &__icon--heart {
-    transform: translateX(0px)
+  &__item:hover &__btn--lupa {
+    transform: translateX(0px);
+  }
+  &__item:hover &__btn--heart {
+    transform: translateX(0px);
   }
   &__item-title {
     @extend %dmsans-500;
@@ -337,6 +359,7 @@ ul.slick-dots {
   }
   &__panel {
     display: flex;
+    align-items: center;
     justify-content: space-around;
     position: absolute;
     margin-bottom: 100px;
@@ -347,22 +370,24 @@ ul.slick-dots {
     cursor: pointer;
   }
   &__btn + &__btn {
-    padding-left: 10px;
+    margin-left: 10px;
   }
-  &__icon {
-    padding: 15px;
+  &__btn {
+    padding-top: 12px;
+    padding-bottom: 5px;
+    padding-left: 12px;
+    padding-right: 10px;
     background-color: #fff;
     border-radius: 50%;
-    transition: all .5s;
+    transition: all 0.5s;
     &--main {
-      background-color: $burger-color;
-      transform: translateY(300px)
+      transform: translateY(300px);
     }
     &--lupa {
-      transform: translateX(-300px)
+      transform: translateX(-300px);
     }
     &--heart {
-      transform: translateX(300px)
+      transform: translateX(300px);
     }
   }
 }
@@ -375,7 +400,7 @@ ul.slick-dots {
     justify-content: space-between;
   }
   &__item {
-    background-color: #FFEFE2;
+    background-color: #ffefe2;
     max-width: 850px;
     width: 100%;
     display: flex;
@@ -406,21 +431,11 @@ ul.slick-dots {
   }
   &__item-link {
     @extend %button;
-    color: #2B6373;
+    color: #2b6373;
     background-color: transparent;
-    border: 1px solid #B3B8B6;
+    border: 1px solid #b3b8b6;
     border-radius: 5%;
   }
 }
-
-
-
-
-
-
-
-
-
-
 
 @import "media";
