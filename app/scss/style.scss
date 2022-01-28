@@ -438,4 +438,77 @@ ul.slick-dots {
   }
 }
 
+.design-title {
+  margin-bottom: 25px;
+}
+
+.design__inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 30px;
+  margin-bottom: 120px;
+  &-item {
+    @extend %dmsans-700;
+    background-color: #F8F8F8;
+    padding-top: 40px;
+    padding-left: 35px;
+    padding-bottom: 120px;
+    padding-right: 165px;
+    overflow: hidden;
+    position: relative;
+    &:nth-child(3) {
+      .design__inner-img {
+        padding-right: 30px;
+        padding-bottom: 55px;
+      }
+    }
+    &:nth-child(5) {
+      .design__inner-img {
+        padding-right: 30px;
+        padding-bottom: 55px;
+      }
+    }
+  }
+  &-title {
+    max-width: 170px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: $title-color;
+    z-index: 10;
+    position: relative;
+  }
+  &-img {
+    right: 0;
+    bottom: 0;
+    position: absolute;
+  }
+  &-item-type {
+    color: $burger-color;
+    position: relative;
+    z-index: 10;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @import "media";
