@@ -43,3 +43,32 @@ body {
   margin-bottom: 40px;
   text-align: center;
 }
+
+.breadcrumbs {
+  display: flex;
+  justify-content: center;
+  &__list {
+    display: flex;
+  }
+  &__item {
+    margin: 0 10px;
+    position: relative;
+    &::after {
+      content: '/';
+      position: absolute;
+      width: 8px;
+      height: 15px;
+      top: 0;
+      right: -15px;
+    }
+    &:last-child {
+      position: inherit;
+    }
+  }
+  &__list-link {
+    font-size: 14px;
+    line-height: 24px;
+    color: $default-color;
+    @extend %rubik-400;
+  }
+}

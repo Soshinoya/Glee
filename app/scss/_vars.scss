@@ -21,6 +21,22 @@ $beige-color: #FFD8B6;
   font-family: 'Poppins-Bold', sans-serif;
   font-weight: 700;
 }
+%rubik-300 {
+  font-family: 'Rubik-Light', sans-serif;
+  font-weight: 300;
+}
+%rubik-400 {
+  font-family: 'Rubik-Regular', sans-serif;
+  font-weight: 400;
+}
+%rubik-700 {
+  font-family: 'Rubik-Medium', sans-serif;
+  font-weight: 700;
+}
+%myriad-400 {
+  font-family: 'MYRIADPRO-REGULAR', sans-serif;
+  font-weight: 400;
+}
 %button {
   background-color: $burger-color;
   color: #fff;
