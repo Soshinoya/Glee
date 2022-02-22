@@ -26,6 +26,15 @@
     url(../fonts/DMSans-Regular.woff) format(woff);
 }
 @font-face {
+  font-family: 'Poppins-SemiBold';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: local('Poppins-SemiBold'),
+    url(../fonts/Poppins-SemiBold.woff2) format(woff2),
+    url(../fonts/Poppins-SemiBold.woff) format(woff);
+}
+@font-face {
   font-family: 'Poppins-Bold';
   font-weight: 700;
   font-style: normal;
@@ -60,6 +69,15 @@
   src: local('Rubik-Medium'),
     url(../fonts/Rubik-Medium.woff2) format(woff2),
     url(../fonts/Rubik-Medium.woff) format(woff);
+}
+@font-face {
+  font-family: 'Rubik-Bold';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: local('Rubik-Bold'),
+    url(../fonts/Rubik-Bold.woff2) format(woff2),
+    url(../fonts/Rubik-Bold.woff) format(woff);
 }
 @font-face {
   font-family: 'MYRIADPRO-REGULAR';

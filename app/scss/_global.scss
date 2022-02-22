@@ -62,7 +62,9 @@ body {
       right: -15px;
     }
     &:last-child {
-      position: inherit;
+      &::after {
+        display: none;
+      }
     }
   }
   &__list-link {

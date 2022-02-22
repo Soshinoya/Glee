@@ -1,4 +1,4 @@
-$accent-color: #013D4C;
+$accent-color: #023D4C;
 $title-color: #191919;
 $default-color: #585858;
 $gray-color: #ECF1F4;
@@ -17,6 +17,10 @@ $beige-color: #FFD8B6;
   font-family: 'DMSans-Regular', sans-serif;
   font-weight: 400;
 }
+%poppins-600 {
+  font-family: 'Poppins-SemiBold', sans-serif;
+  font-weight: 600;
+}
 %poppins-700 {
   font-family: 'Poppins-Bold', sans-serif;
   font-weight: 700;
@@ -34,7 +38,7 @@ $beige-color: #FFD8B6;
   font-weight: 500;
 }
 %rubik-700 {
-  font-family: 'Rubik-Medium', sans-serif;
+  font-family: 'Rubik-Bold', sans-serif;
   font-weight: 700;
 }
 %myriad-400 {
