@@ -1,4 +1,4 @@
-$accent-color: #023D4C;
+$accent-color: #2B6373;
 $title-color: #191919;
 $default-color: #585858;
 $gray-color: #ECF1F4;
@@ -45,6 +45,10 @@ $beige-color: #FFD8B6;
   font-family: 'MYRIADPRO-REGULAR', sans-serif;
   font-weight: 400;
 }
+%nunito-700 {
+  font-family: 'Nunito-Bold', sans-serif;
+  font-weight: 700;
+}
 %button {
   background-color: $burger-color;
   color: #fff;
@@ -59,4 +63,11 @@ $beige-color: #FFD8B6;
   padding-bottom: 20px;
   padding-left: 25px;
   padding-right: 20px;
+}
+%checkbox--hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
 }
