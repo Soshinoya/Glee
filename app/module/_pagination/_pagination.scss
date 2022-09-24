@@ -1,0 +1,19 @@
+.pagination {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    &__list {
+        display: flex;
+        gap: 15px;
+    }
+    &__link {
+        color: $accent-color;
+        @extend %rubik-400;
+        padding: 15px 20px;
+        border: 1px solid $burger-color;
+        &--active {
+            color: #fff;
+            background-color: $burger-color;
+        }
+    }
+}

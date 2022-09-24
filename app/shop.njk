@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product list 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/shop.min.css">
+  </head>
+
+  <body>
+    {% include 'app/module/_header/_header.html' %}
+
+    <main class="main">
+
+      {% include 'app/module/_top/_top.html' %}
+      <section class="product">
+        <a class="filter__link" href="#">Filter</a>
+        <div class="container-icon">
+          <div class="product__inner">
+            {% include 'app/module/_filter/_filter.html' %}
+            <div class="product__content">
+              <div class="product__content-inner">
+                {% include 'app/module/_products/_products.html' %}
+                {% include 'app/module/_products/_products.html' %}
+              </div>
+              {% include 'app/module/_pagination/_pagination.html' %}
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="ideas__partners">
+        <div class="container-icon">
+          <ul class="ideas__partners-list">
+            <li class="ideas__partners-item">
+              <img src="images/partners/1.png" alt="partner">
+            </li>
+            <li class="ideas__partners-item">
+              <img src="images/partners/2.png" alt="partner">
+            </li>
+            <li class="ideas__partners-item">
+              <img src="images/partners/3.png" alt="partner">
+            </li>
+            <li class="ideas__partners-item">
+              <img src="images/partners/4.png" alt="partner">
+            </li>
+            <li class="ideas__partners-item">
+              <img src="images/partners/5.png" alt="partner">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    {% include 'app/module/_footer/_footer.html' %}
+
+    <script src="js/main.min.js" defer></script>>
+  </body>
+
+</html>

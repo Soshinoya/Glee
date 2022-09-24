@@ -1,6 +1,25 @@
-$(function(){
+$(function () {
 
-  $('.product-tabs__item').on('click', function(e) {
+  $('.pagination__link').on('click', function(e) {
+    e.preventDefault();
+    $('.pagination__link').removeClass('pagination__link--active');
+    $(this).addClass('pagination__link--active');
+  });
+
+  $('.user__nav-link--btn').on('click', function () {
+    $('.menu').toggleClass('menu--active');
+    $(this).toggleClass('user__nav-link--btn-resolve');
+  });
+
+  $('.filter__link').on('click', function (e) {
+    e.preventDefault();
+    $('.blog-aside').toggleClass('blog-aside--active');
+    $('.blog__inner').toggleClass('blog__inner-filter');
+    $('.filter__inner').toggleClass('filter__inner--active');
+    $('.product').toggleClass('product--filter');
+  });
+
+  $('.product-tabs__item').on('click', function (e) {
     e.preventDefault();
     $('.product-tabs__item').removeClass('product-tabs__item--active');
     $('.product-tabs__content-item').removeClass('product-tabs__content-item--active');
@@ -10,13 +29,22 @@ $(function(){
 
   $('.select-style, .product-one__input').styler();
 
-  $('.related__inner').slick({
+  document.body.offsetWidth <= 1060 ? $('.related__inner').slick({
     slidesToShow: 4,
     draggable: false,
     slidesToScroll: 2,
     autoplay: true,
     autoplaySpeed: 2000,
-  });
+    vertical: true
+  }) : console.log('No');
+
+  document.body.offsetWidth > 1060 ? $('.related__inner').slick({
+    slidesToShow: 4,
+    draggable: false,
+    slidesToScroll: 2,
+    autoplay: true,
+    autoplaySpeed: 2000
+  }) : console.log('No');
 
   $('.top-slider__inner').slick({
     dots: true,
@@ -69,5 +97,5 @@ $(function(){
   var mixer = mixitup('.products__items');
   var mixer__fiter = mixitup('.product__content');
   var mixer__design = mixitup('.design__inner');
-  
+
 });

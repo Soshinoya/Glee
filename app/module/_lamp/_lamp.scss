@@ -1,0 +1,120 @@
+.lamp {
+    margin-top: 190px;
+    margin-bottom: 100px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        background-color: #ffefe2;
+        max-width: 850px;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    &__item-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 345px;
+    }
+    &__item-img {
+        margin-top: -90px;
+        margin-bottom: 90px;
+    }
+    &__item-title {
+        @extend %dmsans-700;
+        font-size: 26px;
+        line-height: 32px;
+        color: $accent-color;
+        margin-bottom: 30px;
+    }
+    &__item-text {
+        font-family: "Rubik", sans-serif;
+        font-weight: 400;
+        color: $accent-color;
+        margin-bottom: 30px;
+    }
+    &__item-link {
+        @extend %button;
+        color: #2b6373;
+        background-color: transparent;
+        border: 1px solid #b3b8b6;
+        border-radius: 5%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .lamp {
+        &__item-title {
+            font-size: 22px;
+        }
+        &__item-text {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .lamp {
+        &__item-title {
+            text-align: end;
+        }
+        &__item-content {
+            align-items: flex-end;
+            &:last-child {
+                margin-right: 30px;
+            }
+        }
+        &__item-img {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media (max-width: 860px) {
+    .lamp {
+        &__item-img {
+            display: none;
+        }
+        &__item-title {
+            text-align: start;
+        }
+        &__item-content {
+            align-items: flex-start;
+            margin: 100px 0;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        &__item-link {
+            width: 200px;
+        }
+    }
+}
+
+@media (max-width: 660px) {
+    .lamp {
+        &__inner {
+            flex-wrap: wrap;
+        }
+        &__item-content {
+            margin: 30px 0;
+        }
+        &__item {
+            align-items: flex-start;
+        }
+        &__item-link {
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (max-width: 440px) {
+    .lamp {
+        &__item-title {
+            font-size: 18px;
+            margin: 0 auto 30px;
+        }
+    }
+}

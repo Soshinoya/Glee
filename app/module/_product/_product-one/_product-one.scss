@@ -1,0 +1,119 @@
+.product-one {
+    &__inner {
+        display: flex;
+        gap: 70px;
+    }
+    &__title {
+        font-size: 40px;
+        color: $title-color;
+        @extend %rubik-400;
+        line-height: 40px;
+        margin-bottom: 25px;
+    }
+    &__price {
+        margin: 35px 0;
+        font-size: 30px;
+        color: $title-color;
+        @extend %rubik-400;
+    }
+    &__text {
+        @extend %rubik-400;
+        color: $accent-color;
+        max-width: 505px;
+        margin-bottom: 35px;
+    }
+    &__form {
+        margin-bottom: 55px;
+    }
+    &__btn {
+        margin-left: 25px;
+        padding: 10px 40px;
+        background-color: $burger-color;
+        color: #fff;
+        text-transform: uppercase;
+        @extend %rubik-400;
+        font-size: 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    &__info {
+        p {
+            @extend %rubik-400;
+            color: $accent-color;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .product-one {
+        &__form {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: baseline;
+        }
+        &__btn {
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .product-one {
+        &__inner {
+            gap: 30px;
+        }
+        &__info {
+            display: flex;
+            gap: 40px;
+        }
+    }
+}
+
+@media (max-width: 860px) {
+    .product-one {
+        &__title {
+            font-size: 36px;
+        }
+    }
+}
+
+@media (max-width: 760px) {
+    .product-one {
+        &__inner {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__content {
+            width: 100%;
+        }
+        &__text {
+            max-width: none;
+        }
+        &__form {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media (max-width: 440px) {
+    .product-one {
+        &__inner .star {
+            display: none;
+        }
+        &__title {
+            font-size: 30px;
+        }
+        &__text {
+            font-size: 14px;
+        }
+        &__info {
+            gap: 30px;
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+}
