@@ -1,0 +1,109 @@
+.team {
+    padding-bottom: 115px;
+    &__inner {
+        display: flex;
+        gap: 100px;
+    }
+    &__column-text {
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        h2 {
+            margin-bottom: 0;
+        }
+    }
+    &__text {
+        color: $accent-color;
+        @extend %rubik-400;
+        text-align: justify;
+    }
+    &__link {
+        @extend %poppins-600;
+        border-radius: 5px;
+        padding: 0 30px 0 15px;
+        max-width: 170px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 15px;
+        line-height: 55px;
+        color: #fff;
+        background-color: $burger-color;
+    }
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+    &__item {
+        width: 370px;
+        height: 318px;
+        position: relative;
+        margin-bottom: 60px;
+    }
+    &__item-info {
+        display: flex;
+        gap: 60px;
+        align-items: center;
+        box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+        width: max-content;
+        padding: 30px 20px 25px 25px;
+        margin-top: -50px;
+        background-color: #fff;
+        position: absolute;
+        bottom: -60px;
+    }
+    &__item-text {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    &__item-text__name {
+        @extend %dmsans-700;
+        font-size: 22px;
+        line-height: 26px;
+        color: #2b6373;
+    }
+    &__item-links {
+        display: flex;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .team {
+        &__inner {
+            gap: 60px;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .team {
+        &__items {
+            display: flex;
+            flex-wrap: wrap;
+            width: min-content;
+        }
+        &__inner {
+            justify-content: space-evenly;
+        }
+    }
+}
+
+@media (max-width: 860px) {
+    .team {
+        &__inner {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media (max-width: 440px) {
+    .team {
+        &__items {
+            display: none;
+        }
+    }
+}

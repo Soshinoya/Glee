@@ -1,0 +1,22 @@
+.video {
+    padding: 185px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    margin-bottom: 120px;
+    &-button {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 660px) {
+    .video {
+        padding: 100px 0;
+    }
+}
+
+@media (max-width: 450px) {
+    .video {
+        padding: 50px 0;
+    }
+}

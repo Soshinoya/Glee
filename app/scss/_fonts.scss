@@ -1,83 +1,83 @@
 @font-face {
-  font-family: 'DMSans-Bold';
+  font-family: 'DM Sans';
   font-weight: 700;
   font-style: normal;
   font-display: swap;
   src: local('DMSans-Bold'),
-    url(../fonts/DMSans-Bold.woff2) format(woff2),
-    url(../fonts/DMSans-Bold.woff) format(woff);
+    url(../fonts/DMSans-Bold.woff2) format('woff2'),
+    url(../fonts/DMSans-Bold.woff) format('woff');
 }
 @font-face {
-  font-family: 'DMSans-Medium';
+  font-family: 'DM Sans';
   font-weight: 500;
   font-style: normal;
   font-display: swap;
   src: local('DMSans-Medium'),
-    url(../fonts/DMSans-Medium.woff2) format(woff2),
-    url(../fonts/DMSans-Medium.woff) format(woff);
+    url(../fonts/DMSans-Medium.woff2) format('woff2'),
+    url(../fonts/DMSans-Medium.woff) format('woff');
 }
 @font-face {
-  font-family: 'DMSans-Regular';
+  font-family: 'DM Sans';
   font-weight: 400;
   font-style: normal;
   font-display: swap;
   src: local('DMSans-Regular'),
-    url(../fonts/DMSans-Regular.woff2) format(woff2),
-    url(../fonts/DMSans-Regular.woff) format(woff);
+    url(../fonts/DMSans-Regular.woff2) format('woff2'),
+    url(../fonts/DMSans-Regular.woff) format('woff');
 }
 @font-face {
-  font-family: 'Poppins-SemiBold';
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-  src: local('Poppins-SemiBold'),
-    url(../fonts/Poppins-SemiBold.woff2) format(woff2),
-    url(../fonts/Poppins-SemiBold.woff) format(woff);
-}
-@font-face {
-  font-family: 'Poppins-Bold';
+  font-family: 'Poppins';
   font-weight: 700;
   font-style: normal;
   font-display: swap;
   src: local('Poppins-Bold'),
-    url(../fonts/Poppins-Bold.woff2) format(woff2),
-    url(../fonts/Poppins-Bold.woff) format(woff);
+    url(../fonts/Poppins-Bold.woff2) format('woff2'),
+    url(../fonts/Poppins-Bold.woff) format('woff');
 }
 @font-face {
-  font-family: 'Rubik-Light';
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: local('Poppins-SemiBold'),
+    url(../fonts/Poppins-SemiBold.woff2) format('woff2'),
+    url(../fonts/Poppins-SemiBold.woff) format('woff');
+}
+@font-face {
+  font-family: 'Rubik';
   font-weight: 300;
   font-style: normal;
   font-display: swap;
   src: local('Rubik-Light'),
-    url(../fonts/Rubik-Light.woff2) format(woff2),
-    url(../fonts/Rubik-Light.woff) format(woff);
+    url(../fonts/Rubik-Light.woff2) format('woff2'),
+    url(../fonts/Rubik-Light.woff) format('woff');
 }
 @font-face {
-  font-family: 'Rubik-Regular';
+  font-family: 'Rubik';
   font-weight: 400;
   font-style: normal;
   font-display: swap;
   src: local('Rubik-Regular'),
-    url(../fonts/Rubik-Regular.woff2) format(woff2),
-    url(../fonts/Rubik-Regular.woff) format(woff);
+    url(../fonts/Rubik-Regular.woff2) format('woff2'),
+    url(../fonts/Rubik-Regular.woff) format('woff');
 }
 @font-face {
-  font-family: 'Rubik-Medium';
+  font-family: 'Rubik';
   font-weight: 500;
   font-style: normal;
   font-display: swap;
   src: local('Rubik-Medium'),
-    url(../fonts/Rubik-Medium.woff2) format(woff2),
-    url(../fonts/Rubik-Medium.woff) format(woff);
+    url(../fonts/Rubik-Medium.woff2) format('woff2'),
+    url(../fonts/Rubik-Medium.woff) format('woff');
 }
 @font-face {
-  font-family: 'Rubik-Bold';
+  font-family: 'Rubik';
   font-weight: 700;
   font-style: normal;
   font-display: swap;
   src: local('Rubik-Bold'),
-    url(../fonts/Rubik-Bold.woff2) format(woff2),
-    url(../fonts/Rubik-Bold.woff) format(woff);
+    url(../fonts/Rubik-Bold.woff2) format('woff2'),
+    url(../fonts/Rubik-Bold.woff) format('woff');
 }
 @font-face {
   font-family: 'MYRIADPRO-REGULAR';
@@ -85,15 +85,15 @@
   font-style: normal;
   font-display: swap;
   src: local('MYRIADPRO-REGULAR'),
-    url(../fonts/MYRIADPRO-REGULAR.woff2) format(woff2),
-    url(../fonts/MYRIADPRO-REGULAR.woff) format(woff);
+    url(../fonts/MYRIADPRO-REGULAR.woff2) format('woff2'),
+    url(../fonts/MYRIADPRO-REGULAR.woff) format('woff');
 }
 @font-face {
-  font-family: 'Nunito-Bold';
+  font-family: 'Nunito';
   font-weight: 700;
   font-style: normal;
   font-display: swap;
   src: local('Nunito-Bold'),
-    url(../fonts/Nunito-Bold.woff2) format(woff2),
-    url(../fonts/Nunito-Bold.woff) format(woff);
+    url(../fonts/Nunito-Bold.woff2) format('woff2'),
+    url(../fonts/Nunito-Bold.woff) format('woff');
 }

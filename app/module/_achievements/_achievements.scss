@@ -1,0 +1,35 @@
+.achievements {
+    padding: 75px 0;
+    margin-bottom: 115px;
+    background-color: $beige-color;
+    &__items {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .title {
+            margin: 20px 0 20px 0;
+        }
+    }
+    &__item-text {
+        @extend %dmsans-700;
+        font-size: 18px;
+        color: $accent-color;
+    }
+}
+
+@media (max-width: 860px) {
+    .achievements {
+        margin-bottom: 60px;
+        &__items {
+            flex-wrap: wrap;
+        }
+        &__item + .achievements__item {
+            padding-top: 40px;
+        }
+    }
+}

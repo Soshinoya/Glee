@@ -1,0 +1,190 @@
+.about {
+    padding: 115px 0;
+    &__inner {
+        display: flex;
+    }
+    &__img {
+        max-width: 570px;
+        max-height: 675px;
+        width: 100%;
+        height: 100%;
+    }
+    &__content {
+        padding: 80px 0 80px 40px;
+        max-width: 570px;
+    }
+    &__content-top {
+        display: flex;
+        align-items: center;
+    }
+    &__content-num {
+        @extend %rubik-700;
+        font-size: 140px;
+        line-height: 32px;
+        color: $burger-color;
+    }
+    &__content-top__text {
+        @extend %rubik-400;
+        color: $accent-color;
+        margin-left: 30px;
+        margin-bottom: -13px;
+    }
+    &__content-info {
+        padding: 50px 0 60px 0;
+        border-bottom: 1px solid #e5ebf1;
+        text-align: left;
+    }
+    &__content-text {
+        @extend %rubik-400;
+        color: $accent-color;
+    }
+    &__content-achievements {
+        display: flex;
+        margin-top: 30px;
+    }
+    &__content-item {
+        padding: 10px 45px 10px 55px;
+        position: relative;
+        margin-right: 45px;
+        border-right: 1px solid #e5ebf1;
+        & .title {
+            margin-bottom: 0;
+        }
+        &:nth-child(2) {
+            .about__content-item__inner {
+                &::before {
+                    background-image: url("../images/icons/speaker.svg");
+                }
+            }
+        }
+        &:nth-child(3) {
+            border: none;
+            .about__content-item__inner {
+                &::before {
+                    background-image: url("../images/icons/award.svg");
+                }
+            }
+        }
+        &__inner {
+            &:nth-child(2) {
+                padding: 0 50px 0 50px;
+            }
+            &:nth-child(3) {
+                padding: 0 0 0 50px;
+            }
+        }
+    }
+    &__content-item__inner::before {
+        content: "";
+        position: absolute;
+        background-image: url("../images/icons/blank.svg");
+        top: 10px;
+        left: 0;
+        width: 40px;
+        height: 45px;
+        background-repeat: no-repeat;
+    }
+    &__content-item__subtitle {
+        @extend %dmsans-700;
+        color: $default-color;
+    }
+}
+
+@media (max-width: 1300px) {
+    .about {
+        &__img {
+            max-height: 450px;
+            max-width: 450px;
+        }
+        &__content {
+            padding: 50px 0 25px 25px;
+        }
+        &__content-item {
+            padding: 10px 20px 10px 50px;
+        }
+        &__content-info {
+            padding: 40px 0;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .about {
+        &__img {
+            display: none;
+        }
+        &__content {
+            margin: 0 auto;
+            padding: 0;
+        }
+        &__content-item {
+            padding: 10px 50px;
+        }
+        &__content-info {
+            padding: 55px 0;
+        }
+        &__content-top {
+            display: flex;
+            justify-content: center;
+        }
+        &__content-text {
+            text-align: justify;
+        }
+    }
+    .ideas__title--terms {
+        text-align: center;
+    }
+}
+
+@media (max-width: 860px) {
+    .about {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 660px) {
+    .about {
+        &__content-achievements {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__content-item {
+            border: none;
+            margin: 0;
+        }
+    }
+}
+
+@media (max-width: 440px) {
+    .about {
+        &__content-top {
+            display: none;
+        }
+        &__content-info {
+            padding: 25px 0;
+        }
+        &__content-text,
+        &__content-item__subtitle {
+            font-size: 14px;
+        }
+    }
+    .achievements {
+        p.achievements__item-text {
+            font-size: 14px;
+        }
+    }
+    .team {
+        &__text {
+            font-size: 14px;
+        }
+        &__item-text {
+            p {
+                font-size: 14px;
+            }
+        }
+        h3.team__item-text__name {
+            font-size: 18px;
+        }
+    }
+}
+

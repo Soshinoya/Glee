@@ -1,0 +1,66 @@
+.modal {
+    padding: 115px 0;
+    margin: 0 auto;
+    max-width: 470px;
+    &__label {
+        display: block;
+        margin-bottom: 30px;
+        @extend %rubik-400;
+        font-size: 14px;
+        color: #2b6373;
+    }
+    &__input {
+        display: block;
+        width: 100%;
+        border: 1px solid $gray-color;
+        background-color: #fff;
+        margin-top: 5px;
+        height: 60px;
+        padding: 0 10px;
+    }
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        border-bottom: 1px solid $gray-color;
+    }
+    &__btn {
+        border: none;
+        background-color: $burger-color;
+        width: 100%;
+        padding: 15px 0;
+        color: #fff;
+        font-size: 18px;
+        @extend %rubik-700;
+        margin-bottom: 30px;
+        cursor: pointer;
+    }
+    &__btn--create {
+        display: block;
+        width: 100%;
+        padding: 15px 0;
+        border: 1px solid #a3bbc8;
+        background-color: #fff;
+        color: $burger-color;
+        font-size: 18px;
+        @extend %rubik-700;
+        cursor: pointer;
+    }
+    &__link {
+        color: #2b6373;
+        display: block;
+        margin-bottom: 20px;
+    }
+    &__reg {
+        text-align: center;
+    }
+}
+
+@media (max-width: 440px) {
+    .modal {
+        padding: 60px 0;
+        &__link {
+            font-size: 14px;
+        }
+    }
+}
