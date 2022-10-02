@@ -5,12 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Authorize</title>
+  <link rel="shortcut icon" type="image/x-icon" href="images/logo.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/login.min.css">
   <link rel="stylesheet" href="css/style.min.css">
+  {% set breadcrumbsPage = "Login" %}
 </head>
 
 <body>
@@ -19,7 +21,7 @@
   <main class="main">
 
 
-    {% include 'app/module/_top/_top.html' %}
+    {% include 'app/module/_top/_top.njk' %}
     {% include 'app/module/_modal/_modal.html' %}
     <div class="ideas__partners">
       <div class="container-icon">

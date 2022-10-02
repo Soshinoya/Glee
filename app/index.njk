@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Landing</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo.svg"/>
     <link rel="stylesheet" href="css/index.min.css">
   </head>
 
@@ -19,21 +20,15 @@
       <section class="products">
         <div class="container-icon">
           <h2 class="title">Products of the week</h2>
-          <div class="filter">
-            <button class="filter-btn" data-filter="all">All</button>
-            <button class="filter-btn" data-filter=".category-a">Furnitures</button>
-            <button class="filter-btn" data-filter=".category-b">Chairs</button>
-            <button class="filter-btn" data-filter=".category-c">Lighting</button>
-            <button class="filter-btn" data-filter=".category-d">Decor</button>
-          </div>
-          <div class="products__items">
+            {% include 'app/module/_mixitup-filter/_mixitup-filter.html' %}
+          <ul class="products__items" id="products__items">
             {% include 'app/module/_products/_products.html' %}
-          </div>
+          </ul>
         </div>
       </section>
 
       {% include 'app/module/_lamp/_lamp.html' %}
-      {% include 'app/module/_design/_design.html' %}
+      {% include 'app/module/_design/_design.njk' %}
       {% include 'app/module/_video/_video.html' %}
       {% include 'app/module/_ideas/_ideas.html' %}
 

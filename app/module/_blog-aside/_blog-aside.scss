@@ -1,4 +1,5 @@
 .blog-aside {
+    grid-area: aside;
     z-index: 1;
     .filter-category {
         .filter-category__checkbox {
@@ -23,11 +24,12 @@
         height: 40px;
         outline: none;
         opacity: 0.4;
+        width: calc(100% - 40px);
     }
     &__search-btn {
         position: absolute;
         top: -2px;
-        left: 195px;
+        right: 0;
         width: 40px;
         height: 42px;
         background-color: #ecf1f4;
@@ -41,7 +43,7 @@
     }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 720px) {
     .blog-aside {
         display: none;
         position: absolute;

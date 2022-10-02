@@ -83,8 +83,10 @@ function scripts() {
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
     'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
     'node_modules/mixitup/dist/mixitup.min.js',
-    'node_modules/swup/dist/swup.min.js',
-    'app/js/jquery.rateyo.min.js',
+    'app/js/data.js',
+    'app/js/productService.js',
+    'app/js/htmlService.js',
+    'app/js/cartService.js',
     'app/js/main.js',
   ])
   .pipe(concat('main.min.js'))

@@ -5,19 +5,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>About</title>
+  <link rel="shortcut icon" type="image/x-icon" href="images/logo.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/about.min.css">
+  {% set breadcrumbsPage = "About" %}
 </head>
 
 <body>
   {% include 'app/module/_header/_header.html' %}
 
-  <main id="swup" class="main transition-fade">
+  <main class="main">
 
-    {% include 'app/module/_top/_top.html' %}
+    {% include 'app/module/_top/_top.njk' %}
     {% include 'app/module/_about/_about.html' %}
     {% include 'app/module/_achievements/_achievements.html' %}
     {% include 'app/module/_team/_team.html' %}

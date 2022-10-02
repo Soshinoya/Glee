@@ -1,0 +1,22 @@
+.filter,
+.filter-design {
+    margin-bottom: 80px;
+    &-btn {
+        background-color: transparent;
+        border: none;
+        color: #8c8c8c;
+        cursor: pointer;
+    }
+}
+
+.mixitup-control-active {
+    color: $title-color;
+    @extend %dmsans-700;
+}
+
+@media (max-width: 440px) {
+    .filter-btn,
+    .filter-design {
+        font-size: 14px;
+    }
+}
