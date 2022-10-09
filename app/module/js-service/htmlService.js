@@ -8,14 +8,14 @@ function ellipsis(string = '', maxLenght = 30) {
 class HTMLService {
   paintProduct(product) {
     return `
-        <li class="products__item mix category-${product.category}" data-sku="${product.sku}" data-brand="${product.brand}">
+        <li class="products__item mix category-${product.category}" data-sku="${product.sku}" data-brand="${product.brand}" id="products__item">
           <div class="products__item-img">
               <img loading="lazy" src="${product.images[0]}">
           </div>
           <h3 class="products__item-title">${ellipsis(product.title, 50)}</h3>
           <p class="products__price">$${product.price}.00</p>
           <div class="products__panel">
-          <a class="products__btn products__btn--lupa">
+          <a class="products__btn products__btn--lupa" target="_blank" href="product.html" onclick="changeSessionSku(this)">
               <svg preserveAspectRatio="xMidYMid" width="20" height="20" viewBox="0 0 20 20">
                   <defs>
                       <style>
@@ -71,14 +71,60 @@ class HTMLService {
 
   paintLinksLink(product) {
     return `
-      <li class="header-links__item">
-          <a class="header-links__link" href="product.html">${product.title}</a>
+      <li class="header-links__item" data-sku="${product.sku}">
+          <a class="header-links__link" target="_blank" href="product.html" onclick="changeSessionSku(this)">${product.title}</a>
       </li>
     `
   }
 
   paintLinksList(products = []) {
     return products.map(this.paintLinksLink).join('')
+  };
+
+  paintProductPage(product) {
+    return `
+    <div class="product-one__slider product-slide">
+      <div class="product-slide__thumb">
+          <div class="product-slide__thumb-item first__thumb">
+              <img loading="lazy" src="${product.images[0]}" alt="">
+          </div>
+          <div class="product-slide__thumb-item">
+              <img loading="lazy" src="${product.images[1]}" alt="">
+          </div>
+          <div class="product-slide__thumb-item product-slide__thumb-item--last">
+              <img loading="lazy" src="${product.images[2]}" alt="">
+          </div>
+      </div>
+      <div class="product-slide__big">
+          <div class="product-slide__big-item first__big">
+              <img loading="lazy" src="${product.images[0]}" alt="">
+          </div>
+          <div class="product-slide__big-item">
+              <img loading="lazy" src="${product.images[1]}" alt="">
+          </div>
+          <div class="product-slide__big-item">
+              <img loading="lazy" src="${product.images[2]}" alt="">
+          </div>
+      </div>
+    </div>
+    <div class="product-one__content">
+        <h2 class="product-one__title">${product.title}</h2>
+        <div class="star" data-rateyo-rating="4"></div>
+        <p class="product-one__price">${product.price}$</p>
+        <p class="product-one__text">
+            ${product.description}
+        </p>
+        <form class="product-one__form" action="#">
+            <input class="product-one__input" type="number" value="1" min="1" max="5">
+            <button class="product-one__btn" type="submit">Add to cart</button>
+        </form>
+        <div class="product-one__info">
+            <p>SKU: ${product.sku}</p>
+            <p>Category: ${product.category}</p>
+            <p>Tag: Decorative</p>
+        </div>
+    </div>
+    `;
   };
 
   paintCartItem(item) {

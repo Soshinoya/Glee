@@ -2,19 +2,47 @@ const { src, dest, watch, parallel, series } = require('gulp');
 
 
 
-const gulp           = require('gulp');
-const scss           = require('gulp-sass')(require('sass'));
-const concat         = require('gulp-concat');
-const autoprefixer   = require('gulp-autoprefixer');
-const uglify         = require('gulp-uglify');
-const rename         = require('gulp-rename');
-const imagemin       = require('gulp-imagemin');
-const htmlmin        = require('gulp-htmlmin');
+const gulp = require('gulp');
+const scss = require('gulp-sass')(require('sass'));
+const concat = require('gulp-concat');
+const autoprefixer = require('gulp-autoprefixer');
+const uglify = require('gulp-uglify');
+const rename = require('gulp-rename');
+const imagemin = require('gulp-imagemin');
+const htmlmin = require('gulp-htmlmin');
 const nunjucksRender = require('gulp-nunjucks-render');
-const del            = require('del');
-const { notify }     = require('browser-sync');
-const browserSync    = require('browser-sync').create();
-const critical       = require('critical');
+const del = require('del');
+const { notify } = require('browser-sync');
+const browserSync = require('browser-sync').create();
+const critical = require('critical');
+
+function scriptsAbout() { return scriptsCreate('about') };
+function scriptsBlog() { return scriptsCreate('blog') };
+function scriptsContacts() { return scriptsCreate('contacts') };
+function scriptsIndex() { return scriptsCreate('index') };
+function scriptsLogin() { return scriptsCreate('login') };
+function scriptsProduct() { return scriptsCreate('product') };
+function scriptsShop() { return scriptsCreate('shop') };
+function scriptsTerms() { return scriptsCreate('terms') };
+
+function scriptsCreate(name) {
+  return src([
+    'node_modules/jquery/dist/jquery.js',
+    'node_modules/slick-carousel/slick/slick.js',
+    'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
+    'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
+    'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
+    'node_modules/mixitup/dist/mixitup.min.js',
+    `app/js/${name}.js`,
+  ])
+    .pipe(concat(`${name}.js`))
+    .pipe(rename({
+      suffix: '.min'
+    }))
+    .pipe(uglify())
+    .pipe(dest('app/js-min'))
+    .pipe(browserSync.stream())
+};
 
 // function html() {
 //   return src('app/**/*.html')
@@ -63,7 +91,7 @@ function nunjucks() {
 
 function styles() {
   return src('app/scss/*.scss')
-    .pipe(scss({outputStyle: 'compressed'}))
+    .pipe(scss({ outputStyle: 'compressed' }))
     .pipe(rename({
       suffix: '.min'
     }))
@@ -75,34 +103,14 @@ function styles() {
     .pipe(browserSync.stream())
 }
 
-function scripts() {
-  return src([
-    'node_modules/jquery/dist/jquery.js',
-    'node_modules/slick-carousel/slick/slick.js',
-    'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
-    'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
-    'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
-    'node_modules/mixitup/dist/mixitup.min.js',
-    'app/js/data.js',
-    'app/js/productService.js',
-    'app/js/htmlService.js',
-    'app/js/cartService.js',
-    'app/js/main.js',
-  ])
-  .pipe(concat('main.min.js'))
-  .pipe(uglify())
-  .pipe(dest('app/js'))
-  .pipe(browserSync.stream())
-}
-
 function dist() {
   return src([
     'app/**/*.html',
     'app/css/**/*.css',
     'app/images/**/*',
     'app/js/main.min.js'
-  ], {base: 'app'})
-  .pipe(dest('dist'))
+  ], { base: 'app' })
+    .pipe(dest('dist'))
 }
 
 function cleanDist() {
@@ -112,14 +120,29 @@ function cleanDist() {
 function watching() {
   watch(['app/**/*.scss'], styles);
   watch(['app/*.njk'], nunjucks);
-  watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
+  watch(['app/js/about.js'], scriptsAbout);
+  watch(['app/js/blog.js'], scriptsBlog);
+  watch(['app/js/contacts.js'], scriptsContacts);
+  watch(['app/js/index.js'], scriptsIndex);
+  watch(['app/js/login.js'], scriptsLogin);
+  watch(['app/js/product.js'], scriptsProduct);
+  watch(['app/js/shop.js'], scriptsShop);
+  watch(['app/js/terms.js'], scriptsTerms);
   watch(['app/**/*.html']).on('change', browserSync.reload);
 }
 
-
+function scripts() {
+  scriptsAbout();
+  scriptsBlog();
+  scriptsContacts();
+  scriptsIndex();
+  scriptsLogin();
+  scriptsProduct();
+  scriptsShop();
+  scriptsTerms();
+};
 
 exports.styles = styles;
-exports.scripts = scripts;
 exports.browsersync = browsersync;
 exports.watching = watching;
 exports.img = img;

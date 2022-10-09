@@ -1,4 +1,4 @@
-class ProductService {
+class productServiceC {
 
     constructor(products = []) {
         this.products = products
